@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>रोहित संग रश्मि - शुभ विवाह निमंत्रण</title>
+
+    <!-- Google Fonts for Elegant Hindi & Royal Display Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;700&family=Rozha+One&family=Yatra+One&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --primary-maroon: #680514;
+            --royal-crimson: #8C0D23;
+            --deep-burgundy: #38020A;
+            --gold-primary: #D4AF37;
+            --gold-light: #FBF0B9;
+            --gold-dark: #9A6F1A;
+            --gold-gradient: linear-gradient(135deg, #FFF0B3 0%, #D4AF37 45%, #9A6F1A 100%);
+            --royal-red-gradient: linear-gradient(180deg, #42020B 0%, #75091A 40%, #520511 100%);
+            --ivory: #FDFCF7;
+            --card-cream: #FFFBF2;
+            --text-dark: #2A170F;
+            --text-muted: #6E5344;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--deep-burgundy);
+            background-image: 
+                radial-gradient(circle at 50% 15%, rgba(212, 175, 55, 0.22) 0%, transparent 65%),
+                radial-gradient(circle at 85% 85%, rgba(140, 13, 35, 0.35) 0%, transparent 60%);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Ambient Falling Petals Canvas */
+        #petal-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+            overflow: hidden;
+        }
+
+        .petal {
+            position: absolute;
+            background: radial-gradient(circle, #FFA000, #E65100);
+            border-radius: 60% 0 60% 0;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-10vh) rotate(0deg);
+                opacity: 0.95;
+            }
+            100% {
+                transform: translateY(110vh) rotate(720deg);
+                opacity: 0.15;
+            }
+        }
+
+        /* Main Outer Royal Frame */
+        .main-wrapper {
+            max-width: 930px;
+            margin: 35px auto;
+            background: var(--ivory);
+            border-radius: 30px;
+            box-shadow: 0 35px 90px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(212, 175, 55, 0.4);
+            border: 3.5px solid var(--gold-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Top Bar: Language Switcher */
+        .top-action-bar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 18px 24px 0;
+            position: relative;
+            z-index: 30;
+        }
+
+        .lang-badge-btn {
+            background: linear-gradient(135deg, #FFF8E1, #FFE7A3);
+            border: 2px solid var(--gold-primary);
+            color: var(--primary-maroon);
+            padding: 9px 22px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 0.94rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .lang-badge-btn:hover {
+            background: var(--gold-gradient);
+            color: #38020A;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(212, 175, 55, 0.55);
+        }
+
+        /* Royal Header Section */
+        .hero {
+            background: var(--royal-red-gradient);
+            color: #fff;
+            text-align: center;
+            padding: 15px 20px 48px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D4AF37' fill-opacity='0.06'%3E%3Cpath d='M30 0L45 15L30 30L15 15zM30 30L45 45L30 60L15 45z'/%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.45;
+            pointer-events: none;
+        }
+
+        .ganesh-symbol {
+            font-size: 62px;
+            color: var(--gold-light);
+            text-shadow: 0 0 25px rgba(212, 175, 55, 0.8);
+            display: inline-block;
+            animation: breathe 3s infinite ease-in-out;
+            margin-top: 5px;
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.4)); }
+            50% { transform: scale(1.08); filter: drop-shadow(0 0 20px rgba(255, 230, 140, 0.85)); }
+        }
+
+        .shloka {
+            font-family: 'Yatra One', 'Cinzel', cursive;
+            font-size: 1.12rem;
+            color: var(--gold-light);
+            margin: 14px auto;
+            max-width: 640px;
+            line-height: 1.85;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
+
+        .shubh-vivah {
+            font-family: 'Rozha One', 'Cinzel Decorative', serif;
+            font-size: 2.75rem;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 10px;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+        }
+
+        .hero-date-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1.5px solid var(--gold-primary);
+            padding: 7px 24px;
+            border-radius: 30px;
+            color: var(--gold-light);
+            font-size: 1.08rem;
+            font-weight: 600;
+            margin-top: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Couple Showcase Cards */
+        .couple-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            margin: 40px 0 25px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .couple-card {
+            background: rgba(255, 255, 255, 0.09);
+            backdrop-filter: blur(12px);
+            border: 1.8px solid rgba(212, 175, 55, 0.5);
+            border-radius: 22px;
+            padding: 26px 20px;
+            width: 330px;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 32px rgba(0, 0, 0, 0.28);
+            position: relative;
+        }
+
+        .couple-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold-light);
+            box-shadow: 0 16px 40px rgba(212, 175, 55, 0.3);
+        }
+
+        .name {
+            font-family: 'Rozha One', 'Cinzel Decorative', serif;
+            font-size: 2.1rem;
+            color: #FFFDF0;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .details {
+            font-size: 0.94rem;
+            color: #F8EDE0;
+            line-height: 1.68;
+        }
+
+        /* Pure Sang Badge */
+        .sang-badge {
+            font-family: 'Yatra One', 'Cinzel', cursive;
+            font-size: 1.75rem;
+            color: var(--gold-light);
+            background: radial-gradient(circle, #7D091B 0%, #47030D 100%);
+            border: 2.5px solid var(--gold-primary);
+            border-radius: 50%;
+            width: 72px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 22px rgba(212, 175, 55, 0.45);
+            animation: pulse-ring 2.8s infinite;
+        }
+
+        @keyframes pulse-ring {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6); }
+            50% { box-shadow: 0 0 0 8px rgba(212, 175, 55, 0); }
+        }
+
+        .welcome-text {
+            color: #FFF;
+            font-size: 1rem;
+            max-width: 690px;
+            margin: 20px auto 0;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        /* Countdown Timer Section */
+        .countdown-section {
+            background: #FFFFFF;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1.5px dashed rgba(212, 175, 55, 0.5);
+            position: relative;
+        }
+
+        .timer-title {
+            font-family: 'Yatra One', 'Cinzel', cursive;
+            font-size: 1.38rem;
+            color: var(--primary-maroon);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .timer-grid {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .timer-box {
+            background: linear-gradient(180deg, #FFFFFF 0%, #FFF9E6 100%);
+            border: 1.8px solid var(--gold-primary);
+            padding: 12px 18px;
+            border-radius: 18px;
+            min-width: 82px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease;
+        }
+
+        .timer-box:hover {
+            transform: scale(1.06);
+        }
+
+        .timer-num {
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: var(--primary-maroon);
+            line-height: 1.1;
+        }
+
+        .timer-label {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: 45px 26px 35px;
+            background: var(--ivory);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-header h2 {
+            font-family: 'Rozha One', 'Cinzel Decorative', serif;
+            color: var(--primary-maroon);
+            font-size: 2.15rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '❦ ❖ ❦';
+            display: block;
+            color: var(--gold-primary);
+            font-size: 0.95rem;
+            margin-top: 6px;
+            letter-spacing: 5px;
+        }
+
+        /* 4 Horizontal Cards */
+        .horizontal-events-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 14px;
+            overflow-x: auto;
+            padding-bottom: 12px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .horizontal-events-row::-webkit-scrollbar {
+            height: 6px;
+        }
+        .horizontal-events-row::-webkit-scrollbar-thumb {
+            background: #E2C17C;
+            border-radius: 10px;
+        }
+
+        .h-event-card {
+            flex: 1 1 0;
+            min-width: 175px;
+            background: var(--card-cream);
+            border: 1.8px solid #EBD59B;
+            border-radius: 18px;
+            padding: 18px 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            user-select: none;
+        }
+
+        .h-event-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-primary);
+            box-shadow: 0 10px 22px rgba(212, 175, 55, 0.25);
+        }
+
+        .h-event-card.active {
+            border-color: var(--primary-maroon);
+            background: #FFF1F3;
+            box-shadow: 0 10px 25px rgba(122, 12, 29, 0.18);
+            transform: translateY(-5px);
+        }
+
+        .h-event-card.active::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid var(--primary-maroon);
+        }
+
+        .h-event-icon {
+            color: var(--primary-maroon);
+            margin-bottom: 10px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .h-event-card:hover .h-event-icon {
+            transform: scale(1.15) rotate(5deg);
+        }
+
+        .h-event-title {
+            font-family: 'Rozha One', 'Cinzel', serif;
+            font-size: 1.25rem;
+            color: var(--primary-maroon);
+            margin-bottom: 4px;
+        }
+
+        .h-event-date {
+            font-size: 0.86rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .h-event-day {
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* Slide-down Ceremony Panel */
+        .ceremony-slide-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.45s ease;
+            opacity: 0;
+            margin-top: 24px;
+        }
+
+        .ceremony-slide-panel.open {
+            max-height: 800px;
+            opacity: 1;
+        }
+
+        .slide-panel-inner {
+            background: #FFFFFF;
+            border: 2px solid var(--gold-primary);
+            border-radius: 24px;
+            padding: 28px 24px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 16px;
+            position: relative;
+        }
+
+        .traditional-image-box {
+            width: 100%;
+            max-width: 500px;
+            height: 240px;
+            background: #FFFBF2;
+            border: 2px solid #E2C17C;
+            border-radius: 18px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.15), 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        .panel-heading-title {
+            font-family: 'Rozha One', 'Cinzel Decorative', serif;
+            font-size: 1.75rem;
+            color: var(--primary-maroon);
+        }
+
+        .panel-date-badge {
+            display: inline-block;
+            background: var(--gold-gradient);
+            color: #38020A;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            box-shadow: 0 3px 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .traditional-quote-box {
+            background: linear-gradient(135deg, #FFF5F6 0%, #FFF9F2 100%);
+            border-left: 4px solid var(--primary-maroon);
+            border-right: 4px solid var(--primary-maroon);
+            border-radius: 10px;
+            padding: 14px 22px;
+            max-width: 650px;
+            font-style: italic;
+            color: var(--primary-maroon);
+            font-size: 0.98rem;
+            line-height: 1.65;
+        }
+
+        .panel-desc {
+            font-size: 0.96rem;
+            color: #4A3319;
+            max-width: 660px;
+            line-height: 1.7;
+        }
+
+        /* Barat & Venue Banner */
+        .barat-banner {
+            margin: 15px 26px 35px;
+            background: linear-gradient(135deg, #FFF7E6 0%, #FFEFC8 100%);
+            border-left: 6px solid var(--primary-maroon);
+            border-radius: 16px;
+            padding: 22px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-left-width: 6px;
+        }
+
+        .barat-banner h4 {
+            font-family: 'Yatra One', 'Cinzel', cursive;
+            color: var(--primary-maroon);
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .barat-banner p {
+            color: #4A3319;
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+
+        /* Family Section */
+        .family-section {
+            background: #FAF6ED;
+            padding: 40px 28px;
+            border-top: 1.5px dashed rgba(212, 175, 55, 0.6);
+            border-bottom: 1.5px dashed rgba(212, 175, 55, 0.6);
+        }
+
+        .family-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 28px;
+        }
+
+        .family-col h3 {
+            font-family: 'Rozha One', 'Cinzel', serif;
+            font-size: 1.25rem;
+            color: var(--primary-maroon);
+            margin-bottom: 12px;
+            border-bottom: 2px solid var(--gold-primary);
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+
+        .family-col p {
+            font-size: 0.92rem;
+            color: var(--text-dark);
+            line-height: 1.75;
+        }
+
+        /* Kid Quote for Mama Ji */
+        .kid-quote {
+            background: linear-gradient(135deg, #FFF0F3 0%, #FFF8EE 100%);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-top: 35px;
+            text-align: center;
+            font-style: italic;
+            color: var(--primary-maroon);
+            font-size: 1.1rem;
+            border: 1.5px dashed #FFAEC0;
+            box-shadow: 0 4px 15px rgba(255, 174, 192, 0.15);
+        }
+
+        /* Action Buttons */
+        .actions-section {
+            padding: 30px 20px 40px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 15px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.98rem;
+            transition: all 0.35s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--gold-gradient);
+            color: #38020A;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-maroon);
+            border: 2px solid var(--primary-maroon);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-maroon);
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(104, 5, 20, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--deep-burgundy);
+            color: #E2CFBE;
+            text-align: center;
+            padding: 24px 15px;
+            font-size: 0.98rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .footer em {
+            font-style: italic;
+            color: var(--gold-light);
+            letter-spacing: 0.6px;
+        }
+
+        @media (max-width: 600px) {
+            .main-wrapper {
+                margin: 0;
+                border-radius: 0;
+                border: none;
+            }
+            .hero {
+                padding: 10px 15px 35px;
+            }
+            .shubh-vivah {
+                font-size: 2.15rem;
+            }
+            .timeline-section, .family-section {
+                padding: 25px 16px;
+            }
+            .slide-panel-inner {
+                padding: 18px 14px;
+            }
+            .traditional-image-box {
+                height: 190px;
+            }
+            .barat-banner {
+                margin: 10px 16px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Flower Petals Canvas -->
+    <div id="petal-container"></div>
+
+    <div class="main-wrapper">
+        <!-- Top Action Bar: Language Toggle -->
+        <div class="top-action-bar">
+            <button class="lang-badge-btn" onclick="toggleLanguage()">
+                <i data-lucide="globe"></i> <span id="lang-btn-text">Switch to English</span>
+            </button>
+        </div>
+
+        <!-- Royal Header Section -->
+        <header class="hero">
+            <div class="ganesh-symbol">卐</div>
+            <p class="shloka" id="hero-shloka">
+                ॥ श्री गणेशाय नमः ॥<br>
+                वक्रतुण्ड महाकाय सूर्यकोटि समप्रभः ।<br>
+                निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥
+            </p>
+
+            <div class="shubh-vivah" id="hero-title">॥ शुभ विवाह ॥</div>
+            <div class="hero-date-badge" id="hero-date">मंगलवार, 24 नवम्बर 2026</div>
+
+            <!-- Groom & Bride Showcase (Clean 'संग' on first load) -->
+            <div class="couple-container">
+                <div class="couple-card">
+                    <h2 class="name" id="groom-name">चि० रोहित</h2>
+                    <p class="details" id="groom-details">
+                        <strong>सुपौत्र:</strong> स्मृतिशेष रामा प्रसाद एवं स्मृतिशेष लालता देवी<br>
+                        <strong>सुपुत्र:</strong> श्री ओमकार रावत एवं स्मृतिशेष राधा देवी<br>
+                        ग्राम व पोस्ट- मझवार, चन्दौली (उ० प्र०)
+                    </p>
+                </div>
+
+                <div class="sang-badge" id="sang-text">संग</div>
+
+                <div class="couple-card">
+                    <h2 class="name" id="bride-name">आयु० कु० रश्मि</h2>
+                    <p class="details" id="bride-details">
+                        <strong>सुपुत्री:</strong> श्री रमेश चन्द्र रावत एवं श्रीमती सुनीता<br>
+                        ग्राम- उन्चनी कला, रामदयालगंज, जौनपुर (उ० प्र०)
+                    </p>
+                </div>
+            </div>
+
+            <p class="welcome-text" id="hero-welcome">
+                परमपिता परमेश्वर की असीम अनुकम्पा से हमारे पूज्य मामा जी के इस पावन विवाह उत्सव पर आप सपरिवार सादर आमंत्रित हैं।
+            </p>
+        </header>
+
+        <!-- Countdown Timer -->
+        <section class="countdown-section">
+            <h3 class="timer-title" id="countdown-title">
+                <i data-lucide="sparkles" style="color: var(--primary-maroon);"></i>
+                <span>मामा जी की बारात आने में शेष समय</span>
+            </h3>
+            <div class="timer-grid">
+                <div class="timer-box">
+                    <div class="timer-num" id="days">00</div>
+                    <div class="timer-label" id="label-days">दिन</div>
+                </div>
+                <div class="timer-box">
+                    <div class="timer-num" id="hours">00</div>
+                    <div class="timer-label" id="label-hours">घंटे</div>
+                </div>
+                <div class="timer-box">
+                    <div class="timer-num" id="minutes">00</div>
+                    <div class="timer-label" id="label-minutes">मिनट</div>
+                </div>
+                <div class="timer-box">
+                    <div class="timer-num" id="seconds">00</div>
+                    <div class="timer-label" id="label-seconds">सेकंड</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Horizontal 4-Cards + Slide-down Details -->
+        <section class="timeline-section">
+            <div class="section-header">
+                <h2 id="schedule-heading">शगुन के पल (विवाह कार्यक्रम)</h2>
+            </div>
+
+            <div class="horizontal-events-row">
+                <!-- Haldi -->
+                <div class="h-event-card active" id="btn-haldi" onclick="selectCeremony('haldi')">
+                    <div class="h-event-icon"><i data-lucide="sun"></i></div>
+                    <h3 class="h-event-title" id="e1-title">हल्दी</h3>
+                    <p class="h-event-date" id="e1-date">22 नवम्बर 2026</p>
+                    <p class="h-event-day" id="e1-day">रविवार</p>
+                </div>
+
+                <!-- Bhatwan -->
+                <div class="h-event-card" id="btn-bhatwan" onclick="selectCeremony('bhatwan')">
+                    <div class="h-event-icon"><i data-lucide="utensils"></i></div>
+                    <h3 class="h-event-title" id="e2-title">भत्तवान</h3>
+                    <p class="h-event-date" id="e2-date">23 नवम्बर 2026</p>
+                    <p class="h-event-day" id="e2-day">सोमवार</p>
+                </div>
+
+                <!-- Shubh Vivah -->
+                <div class="h-event-card" id="btn-vivah" onclick="selectCeremony('vivah')">
+                    <div class="h-event-icon"><i data-lucide="heart-handshake"></i></div>
+                    <h3 class="h-event-title" id="e3-title">शुभ विवाह</h3>
+                    <p class="h-event-date" id="e3-date">24 नवम्बर 2026</p>
+                    <p class="h-event-day" id="e3-day">मंगलवार</p>
+                </div>
+
+                <!-- Vidai -->
+                <div class="h-event-card" id="btn-vidai" onclick="selectCeremony('vidai')">
+                    <div class="h-event-icon"><i data-lucide="sparkles"></i></div>
+                    <h3 class="h-event-title" id="e4-title">विदाई</h3>
+                    <p class="h-event-date" id="e4-date">25 नवम्बर 2026</p>
+                    <p class="h-event-day" id="e4-day">बुधवार</p>
+                </div>
+            </div>
+
+            <!-- Slide-down Panel Below -->
+            <div class="ceremony-slide-panel open" id="ceremony-slide-panel">
+                <div class="slide-panel-inner">
+                    <div class="traditional-image-box" id="panel-art-container">
+                        <!-- Traditional Vector SVG Artwork -->
+                    </div>
+
+                    <h3 class="panel-heading-title" id="panel-title">हल्दी समारोह</h3>
+                    <span class="panel-date-badge" id="panel-date">22 नवम्बर 2026 • दिन रविवार</span>
+
+                    <div class="traditional-quote-box" id="panel-quote">
+                        "हल्दी लागे, चंदन लागे, लागे प्यार का टीका... हमारे मामा जी के जीवन में खुशियों का रंग कभी न हो फीका।"
+                    </div>
+
+                    <p class="panel-desc" id="panel-desc">
+                        सुगंधित उबटन और हल्दी का पावन लेप मामा जी और मामी जी के जीवन में खुशहाली, कांति और सौभाग्य का संचार करता है।
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Barat & Venue Info -->
+        <div class="barat-banner">
+            <h4 id="barat-heading"><i data-lucide="map-pin"></i> मामा जी की बारात प्रस्थान एवं विवाह स्थल</h4>
+            <p id="barat-details">
+                <strong>बारात प्रस्थान:</strong> हमारे निवास स्थान (ग्राम व पोस्ट- मझवार, चन्दौली) से सायं 3:00 बजे शुक्ला मैरेज हॉल के लिए प्रस्थान करेगी।<br>
+                <strong>विवाह स्थल:</strong> शुक्ला मैरेज हॉल, फूलपुर, हरबसपुर, मडियाहू रोड, जौनपुर।
+            </p>
+        </div>
+
+        <!-- Family & Hosts -->
+        <section class="family-section">
+            <div class="family-grid">
+                <div class="family-col">
+                    <h3 id="fam1-title">स्वागताकांक्षी</h3>
+                    <p id="fam1-desc">बाबूलाल रावत<br>ओमप्रकाश रावत<br>मिथिलेश रावत<br>अरविन्द रावत</p>
+                </div>
+
+                <div class="family-col">
+                    <h3 id="fam2-title">दर्शनाभिलाषी</h3>
+                    <p id="fam2-desc">चन्दन, मदन, मोनू, सोनू, सुनील, पवन, गणेश, अरुण, राहुल, राज, किशन, प्रियांशु, अभि, अनिकेत एवं समस्त परिवारजन।</p>
+                </div>
+
+                <div class="family-col">
+                    <h3 id="fam3-title">विनीत / संपर्क सूत्र</h3>
+                    <p id="fam3-desc">
+                        <strong>ओमकार रावत</strong><br>
+                        ग्राम व पोस्ट- मझवार, जिला- चन्दौली<br>
+                        📞 8600610362, 7007117700
+                    </p>
+                </div>
+            </div>
+
+            <!-- Kid Quote for Mama Ji's Wedding -->
+            <div class="kid-quote" id="kid-quote-text">
+                "नन्हे-नन्हे पाँव हैं कैसे आऊँ बुलाने को, मेरे <strong>मामा जी</strong> की शादी में भूल न जाना आने को।"<br>
+                <strong>— काव्या एवं समस्त भांजे-भांजी</strong>
+            </div>
+        </section>
+
+        <!-- Actions: Contact & Map -->
+        <section class="actions-section">
+            <a href="tel:8600610362" class="btn btn-primary" id="btn-call">
+                <i data-lucide="phone-call"></i> संपर्क करें
+            </a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Shukla+Marriage+Hall+Phoolpur+Jaunpur" target="_blank" class="btn btn-secondary" id="btn-maps">
+                <i data-lucide="navigation"></i> स्थल का रास्ता (Maps)
+            </a>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p><em>developed by Sashi</em></p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Render Icons
+        lucide.createIcons();
+
+        // Robust, Unblockable Hit Tracking via Image Beacon
+        (function recordHit() {
+            const TRACKING_KEY = "Number_of_people_visited_the_wedding_invitation_page";
+
+            if (!sessionStorage.getItem("hit_counted")) {
+                const beacon = new Image();
+                beacon.src = "https://countapi.mileshilliard.com/api/v1/hit/" + TRACKING_KEY + "?t=" + new Date().getTime();
+                sessionStorage.setItem("hit_counted", "true");
+            }
+        })();
+
+        // Traditional Art SVGs
+        const ceremonyArtworks = {
+            haldi: `
+                <svg viewBox="0 0 320 220" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="haldiGlow" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#FFF3B0"/>
+                            <stop offset="100%" stop-color="#FCD34D"/>
+                        </radialGradient>
+                    </defs>
+                    <rect width="320" height="220" fill="#FFFBEB"/>
+                    <circle cx="160" cy="110" r="85" fill="url(#haldiGlow)" stroke="#F59E0B" stroke-width="2" stroke-dasharray="6,4"/>
+                    <path d="M 90 145 C 90 180, 230 180, 230 145 Z" fill="#D97706" stroke="#92400E" stroke-width="3"/>
+                    <ellipse cx="160" cy="145" rx="70" ry="16" fill="#FBBF24" stroke="#B45309" stroke-width="2"/>
+                    <circle cx="120" cy="135" r="10" fill="#EA580C"/>
+                    <circle cx="140" cy="130" r="11" fill="#F59E0B"/>
+                    <circle cx="160" cy="128" r="12" fill="#EA580C"/>
+                    <circle cx="180" cy="130" r="11" fill="#F59E0B"/>
+                    <circle cx="200" cy="135" r="10" fill="#EA580C"/>
+                    <circle cx="160" cy="70" r="22" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+                    <text x="160" y="78" font-size="24" fill="#B45309" text-anchor="middle" font-family="'Rozha One', serif">卐</text>
+                    <path d="M 60 50 Q 80 40 100 50 Q 120 60 140 50" fill="none" stroke="#F59E0B" stroke-width="3"/>
+                    <path d="M 180 50 Q 200 60 220 50 Q 240 40 260 50" fill="none" stroke="#F59E0B" stroke-width="3"/>
+                </svg>
+            `,
+            bhatwan: `
+                <svg viewBox="0 0 320 220" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="320" height="220" fill="#FFF7ED"/>
+                    <ellipse cx="160" cy="135" rx="65" ry="32" fill="#78350F" stroke="#451A03" stroke-width="3"/>
+                    <ellipse cx="100" cy="135" rx="14" ry="28" fill="#FDE68A" stroke="#78350F" stroke-width="2"/>
+                    <ellipse cx="220" cy="135" rx="14" ry="28" fill="#FDE68A" stroke="#78350F" stroke-width="2"/>
+                    <path d="M 100 115 L 220 125 M 100 135 L 220 135 M 100 155 L 220 145" stroke="#FBBF24" stroke-width="2"/>
+                    <g transform="rotate(-30 160 85)">
+                        <path d="M 90 85 L 220 70 L 235 60 L 235 100 L 220 90 Z" fill="#D97706" stroke="#78350F" stroke-width="2"/>
+                        <circle cx="130" cy="83" r="3" fill="#451A03"/>
+                        <circle cx="150" cy="81" r="3" fill="#451A03"/>
+                        <circle cx="170" cy="79" r="3" fill="#451A03"/>
+                        <circle cx="190" cy="77" r="3" fill="#451A03"/>
+                    </g>
+                    <text x="75" y="65" font-size="20" fill="#B45309">♫</text>
+                    <text x="245" y="70" font-size="24" fill="#B45309">♪</text>
+                </svg>
+            `,
+            vivah: `
+                <svg viewBox="0 0 320 220" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="320" height="220" fill="#FEF2F2"/>
+                    <path d="M 50 200 L 50 70 Q 160 20 270 70 L 270 200" fill="none" stroke="#991B1B" stroke-width="4"/>
+                    <circle cx="160" cy="45" r="16" fill="#FEE2E2" stroke="#B91C1C" stroke-width="2"/>
+                    <text x="160" y="51" font-size="16" fill="#B91C1C" text-anchor="middle">ॐ</text>
+                    <path d="M 110 190 L 130 155 L 190 155 L 210 190 Z" fill="#78350F" stroke="#451A03" stroke-width="3"/>
+                    <rect x="125" y="150" width="70" height="10" fill="#D97706"/>
+                    <path d="M 160 115 Q 145 135 152 150 Q 160 135 168 150 Q 175 135 160 115 Z" fill="#EF4444"/>
+                    <path d="M 160 125 Q 152 138 156 150 Q 160 140 164 150 Q 168 138 160 125 Z" fill="#F59E0B"/>
+                    <path d="M 80 80 Q 160 125 240 80" fill="none" stroke="#DC2626" stroke-width="6" stroke-dasharray="8,5"/>
+                </svg>
+            `,
+            vidai: `
+                <svg viewBox="0 0 320 220" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="320" height="220" fill="#FAF5FF"/>
+                    <rect x="20" y="95" width="280" height="10" rx="4" fill="#B45309" stroke="#78350F" stroke-width="2"/>
+                    <path d="M 90 100 L 110 65 L 210 65 L 230 100 L 220 165 L 100 165 Z" fill="#991B1B" stroke="#7F1D1D" stroke-width="3"/>
+                    <path d="M 125 100 C 125 90, 195 90, 195 100 L 195 150 L 125 150 Z" fill="#FEF3C7" stroke="#D97706" stroke-width="2"/>
+                    <path d="M 125 100 Q 160 120 195 100" fill="none" stroke="#B45309" stroke-width="2"/>
+                    <circle cx="105" cy="170" r="5" fill="#F59E0B"/>
+                    <circle cx="160" cy="170" r="5" fill="#F59E0B"/>
+                    <circle cx="215" cy="170" r="5" fill="#F59E0B"/>
+                    <circle cx="160" cy="55" r="8" fill="#FBBF24" stroke="#B45309"/>
+                </svg>
+            `
+        };
+
+        const ceremonyData = {
+            hi: {
+                haldi: {
+                    title: "हल्दी समारोह",
+                    date: "22 नवम्बर 2026 • दिन रविवार",
+                    quote: "\"हल्दी लागे, चंदन लागे, लागे प्यार का टीका... हमारे मामा जी के जीवन में खुशियों का रंग कभी न हो फीका।\"",
+                    desc: "सुगंधित उबटन और हल्दी का पावन लेप मामा जी और मामी जी के जीवन में खुशहाली, कांति और सौभाग्य का संचार करता है।"
+                },
+                bhatwan: {
+                    title: "भत्तवान समारोह",
+                    date: "23 नवम्बर 2026 • दिन सोमवार",
+                    quote: "\"शहनाई की गूंज और ढोलक की थाप, अपनों के संग से सजेगी मामा जी के ब्याह की हर बात।\"",
+                    desc: "पारंपरिक प्रीतिभोज, मांगलिक गीतों और कुलदेवता के पूजन का पावन अवसर, जहाँ सभी स्वजन मिलकर मंगलकामनाएं करते हैं।"
+                },
+                vivah: {
+                    title: "शुभ विवाह (पाणिग्रहण संस्कार)",
+                    date: "24 नवम्बर 2026 • दिन मंगलवार (रात्रि)",
+                    quote: "\"अग्नि के फेरे, सात वचन और सात जन्मों का साथ... बंधी स्नेह की पावन डोर, हाथों में हाथ।\"",
+                    desc: "पवित्र वैदिक मंत्रोच्चार और अग्नि के समक्ष सात फेरों के साथ दो पवित्र आत्माओं का मिलन। आपकी उपस्थिति नवदम्पति के लिए आशीर्वाद होगी।"
+                },
+                vidai: {
+                    title: "शुभ विदाई",
+                    date: "25 नवम्बर 2026 • दिन बुधवार (प्रातः बेला)",
+                    quote: "\"बाबुल का लाड और आंगन की छांव छोड़कर, नए संसार में बिखरेगी खुशियों की धूप।\"",
+                    desc: "स्नेह, आशीर्वाद और आंसुओं के साथ नई मामी जी के गृह-प्रवेश एवं मंगलमय जीवन की पावन बेला।"
+                }
+            },
+            en: {
+                haldi: {
+                    title: "Haldi Ceremony",
+                    date: "November 22, 2026 • Sunday",
+                    quote: "\"Golden turmeric and sacred drops of love, showering eternal happiness on my dear Mamu from above.\"",
+                    desc: "The sacred application of golden turmeric paste to bestow radiance, positive vibes, and auspicious blessings upon the couple."
+                },
+                bhatwan: {
+                    title: "Bhatwan Ceremony",
+                    date: "November 23, 2026 • Monday",
+                    quote: "\"To the beats of dholak and festive cheer, celebrating our Mamu's big day with family held dear.\"",
+                    desc: "A cherished heritage feast and ancestral ritual seeking auspicious blessings from elders ahead of the wedding rituals."
+                },
+                vivah: {
+                    title: "Auspicious Wedding (Vedic Vivah)",
+                    date: "November 24, 2026 • Tuesday (Night)",
+                    quote: "\"Seven sacred rounds around the holy flame, united forever in love, honour, and name.\"",
+                    desc: "The divine solemnization of marriage through Vedic pheras and sacred vows. Your presence will bless the newlyweds with joy and prosperity."
+                },
+                vidai: {
+                    title: "Vidai Ceremony",
+                    date: "November 25, 2026 • Wednesday (Morning)",
+                    quote: "\"Stepping into a new home with memories so sweet, wishing love and eternal happiness at every beat.\"",
+                    desc: "A heartfelt farewell blessing the bride as she steps happily into our family as our beloved Mami Ji."
+                }
+            }
+        };
+
+        let selectedCeremonyKey = 'haldi';
+        let currentLang = 'hi';
+
+        function selectCeremony(key) {
+            selectedCeremonyKey = key;
+            const panel = document.getElementById('ceremony-slide-panel');
+
+            document.querySelectorAll('.h-event-card').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`btn-${key}`).classList.add('active');
+
+            panel.classList.remove('open');
+            setTimeout(() => {
+                renderCeremonyPanel();
+                panel.classList.add('open');
+            }, 180);
+        }
+
+        function renderCeremonyPanel() {
+            const data = ceremonyData[currentLang][selectedCeremonyKey];
+            document.getElementById('panel-art-container').innerHTML = ceremonyArtworks[selectedCeremonyKey];
+            document.getElementById('panel-title').innerText = data.title;
+            document.getElementById('panel-date').innerText = data.date;
+            document.getElementById('panel-quote').innerText = data.quote;
+            document.getElementById('panel-desc').innerText = data.desc;
+        }
+
+        // Language Dictionary
+        const content = {
+            hi: {
+                langBtn: "Switch to English",
+                shloka: "॥ श्री गणेशाय नमः ॥<br>वक्रतुण्ड महाकाय सूर्यकोटि समप्रभः ।<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥",
+                title: "॥ शुभ विवाह ॥",
+                date: "मंगलवार, 24 नवम्बर 2026",
+                groomName: "चि० रोहित",
+                groomDetails: "<strong>सुपौत्र:</strong> स्मृतिशेष रामा प्रसाद एवं स्मृतिशेष लालता देवी<br><strong>सुपुत्र:</strong> श्री ओमकार रावत एवं स्मृतिशेष राधा देवी<br>ग्राम व पोस्ट- मझवार, चन्दौली (उ० प्र०)",
+                sang: "संग",
+                brideName: "आयु० कु० रश्मि",
+                brideDetails: "<strong>सुपुत्री:</strong> श्री रमेश चन्द्र रावत एवं श्रीमती सुनीता<br>ग्राम- उन्चनी कला, रामदयालगंज, जौनपुर (उ० प्र०)",
+                welcome: "परमपिता परमेश्वर की असीम अनुकम्पा से हमारे पूज्य मामा जी के इस पावन विवाह उत्सव पर आप सपरिवार सादर आमंत्रित हैं।",
+                countdownTitle: "मामा जी की बारात आने में शेष समय",
+                days: "दिन",
+                hours: "घंटे",
+                minutes: "मिनट",
+                seconds: "सेकंड",
+                scheduleHeading: "शगुन के पल (विवाह कार्यक्रम)",
+                e1Title: "हल्दी",
+                e1Date: "22 नवम्बर 2026",
+                e1Day: "रविवार",
+                e2Title: "भत्तवान",
+                e2Date: "23 नवम्बर 2026",
+                e2Day: "सोमवार",
+                e3Title: "शुभ विवाह",
+                e3Date: "24 नवम्बर 2026",
+                e3Day: "मंगलवार",
+                e4Title: "विदाई",
+                e4Date: "25 नवम्बर 2026",
+                e4Day: "बुधवार",
+                baratHeading: "<i data-lucide='map-pin'></i> मामा जी की बारात प्रस्थान एवं विवाह स्थल",
+                baratDetails: "<strong>बारात प्रस्थान:</strong> हमारे निवास स्थान (ग्राम व पोस्ट- मझवार, चन्दौली) से सायं 3:00 बजे शुक्ला मैरेज हॉल के लिए प्रस्थान करेगी।<br><strong>विवाह स्थल:</strong> शुक्ला मैरेज हॉल, फूलपुर, हरबसपुर, मडियाहू रोड, जौनपुर।",
+                fam1Title: "स्वागताकांक्षी",
+                fam1Desc: "बाबूलाल रावत<br>ओमप्रकाश रावत<br>मिथिलेश रावत<br>अरविन्द रावत",
+                fam2Title: "दर्शनाभिलाषी",
+                fam2Desc: "चन्दन, मदन, मोनू, सोनू, सुनील, पवन, गणेश, अरुण, राहुल, राज, किशन, प्रियांशु, अभि, अनिकेत एवं समस्त परिवारजन।",
+                fam3Title: "विनीत / संपर्क सूत्र",
+                fam3Desc: "<strong>ओमकार रावत</strong><br>ग्राम व पोस्ट- मझवार, जिला- चन्दौली<br>📞 8600610362, 7007117700",
+                kidQuote: "\"नन्हे-नन्हे पाँव हैं कैसे आऊँ बुलाने को, मेरे <strong>मामा जी</strong> की शादी में भूल न जाना आने को।\"<br><strong>— काव्या एवं समस्त भांजे-भांजी</strong>",
+                btnCall: "<i data-lucide='phone-call'></i> संपर्क करें",
+                btnMaps: "<i data-lucide='navigation'></i> स्थल का रास्ता (Maps)"
+            },
+            en: {
+                langBtn: "हिंदी में देखें (Hindi)",
+                shloka: "|| Shree Ganeshaya Namah ||<br>May Lord Ganesha bless this auspicious union and remove all obstacles.",
+                title: "Wedding Invitation",
+                date: "Tuesday, November 24, 2026",
+                groomName: "Rohit",
+                groomDetails: "<strong>Grandson of:</strong> Late Rama Prasad & Late Lalta Devi<br><strong>Son of:</strong> Mr. Omkar Rawat & Late Radha Devi<br>Vill & Post - Majhwar, Chandauli (U.P.)",
+                sang: "Weds",
+                brideName: "Rashmi",
+                brideDetails: "<strong>Daughter of:</strong> Mr. Ramesh Chandra Rawat & Mrs. Sunita<br>Vill - Unchni Kala, Ramdayalganj, Jaunpur (U.P.)",
+                welcome: "With the divine blessings of Almighty and elders, we cordially invite you with family to celebrate the auspicious wedding ceremony of our beloved Maternal Uncle (Mamu).",
+                countdownTitle: "Countdown to Mamu's Auspicious Wedding",
+                days: "Days",
+                hours: "Hours",
+                minutes: "Mins",
+                seconds: "Secs",
+                scheduleHeading: "Wedding Itinerary & Functions",
+                e1Title: "Haldi",
+                e1Date: "Nov 22, 2026",
+                e1Day: "Sunday",
+                e2Title: "Bhatwan",
+                e2Date: "Nov 23, 2026",
+                e2Day: "Monday",
+                e3Title: "Vivah",
+                e3Date: "Nov 24, 2026",
+                e3Day: "Tuesday",
+                e4Title: "Vidai",
+                e4Date: "Nov 25, 2026",
+                e4Day: "Wednesday",
+                baratHeading: "<i data-lucide='map-pin'></i> Mamu's Barat Departure & Venue",
+                baratDetails: "<strong>Barat Departure:</strong> Departs from our residence (Majhwar, Chandauli) at 3:00 PM towards Shukla Marriage Hall.<br><strong>Venue:</strong> Shukla Marriage Hall, Phoolpur, Harbaspur, Madiyahu Road, Jaunpur.",
+                fam1Title: "Welcoming Hosts",
+                fam1Desc: "Babulal Rawat<br>Omprakash Rawat<br>Mithilesh Rawat<br>Arvind Rawat",
+                fam2Title: "Well Wishers",
+                fam2Desc: "Chandan, Madan, Monu, Sonu, Sunil, Pawan, Ganesh, Arun, Rahul, Raj, Kishan, Priyanshu, Abhi, Aniket and the entire Family.",
+                fam3Title: "Cordially Invited By",
+                fam3Desc: "<strong>Omkar Rawat</strong><br>Vill & Post - Majhwar, Dist - Chandauli<br>📞 8600610362, 7007117700",
+                kidQuote: "\"My tiny feet can't come so far to say hello, so please don't forget to attend my <strong>Mamu's</strong> wedding!\"<br><strong>— Kavya and all Nieces & Nephews</strong>",
+                btnCall: "<i data-lucide='phone-call'></i> Call Us",
+                btnMaps: "<i data-lucide='navigation'></i> View Venue Map"
+            }
+        };
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'hi' ? 'en' : 'hi';
+            const c = content[currentLang];
+
+            document.getElementById('lang-btn-text').innerText = c.langBtn;
+            document.getElementById('hero-shloka').innerHTML = c.shloka;
+            document.getElementById('hero-title').innerText = c.title;
+            document.getElementById('hero-date').innerText = c.date;
+
+            document.getElementById('groom-name').innerText = c.groomName;
+            document.getElementById('groom-details').innerHTML = c.groomDetails;
+            document.getElementById('sang-text').innerText = c.sang;
+            document.getElementById('bride-name').innerText = c.brideName;
+            document.getElementById('bride-details').innerHTML = c.brideDetails;
+            document.getElementById('hero-welcome').innerText = c.welcome;
+
+            document.getElementById('countdown-title').innerHTML = `<i data-lucide="sparkles" style="color: var(--primary-maroon);"></i> <span>${c.countdownTitle}</span>`;
+            document.getElementById('label-days').innerText = c.days;
+            document.getElementById('label-hours').innerText = c.hours;
+            document.getElementById('label-minutes').innerText = c.minutes;
+            document.getElementById('label-seconds').innerText = c.seconds;
+
+            document.getElementById('schedule-heading').innerText = c.scheduleHeading;
+
+            document.getElementById('e1-title').innerText = c.e1Title;
+            document.getElementById('e1-date').innerText = c.e1Date;
+            document.getElementById('e1-day').innerText = c.e1Day;
+
+            document.getElementById('e2-title').innerText = c.e2Title;
+            document.getElementById('e2-date').innerText = c.e2Date;
+            document.getElementById('e2-day').innerText = c.e2Day;
+
+            document.getElementById('e3-title').innerText = c.e3Title;
+            document.getElementById('e3-date').innerText = c.e3Date;
+            document.getElementById('e3-day').innerText = c.e3Day;
+
+            document.getElementById('e4-title').innerText = c.e4Title;
+            document.getElementById('e4-date').innerText = c.e4Date;
+            document.getElementById('e4-day').innerText = c.e4Day;
+
+            document.getElementById('barat-heading').innerHTML = c.baratHeading;
+            document.getElementById('barat-details').innerHTML = c.baratDetails;
+
+            document.getElementById('fam1-title').innerText = c.fam1Title;
+            document.getElementById('fam1-desc').innerHTML = c.fam1Desc;
+            document.getElementById('fam2-title').innerText = c.fam2Title;
+            document.getElementById('fam2-desc').innerHTML = c.fam2Desc;
+            document.getElementById('fam3-title').innerText = c.fam3Title;
+            document.getElementById('fam3-desc').innerHTML = c.fam3Desc;
+
+            document.getElementById('kid-quote-text').innerHTML = c.kidQuote;
+
+            document.getElementById('btn-call').innerHTML = c.btnCall;
+            document.getElementById('btn-maps').innerHTML = c.btnMaps;
+
+            renderCeremonyPanel();
+            lucide.createIcons();
+        }
+
+        // Initialize Panel
+        renderCeremonyPanel();
+
+        // Falling Flower Petal generator
+        const petalContainer = document.getElementById('petal-container');
+        for (let i = 0; i < 22; i++) {
+            const petal = document.createElement('div');
+            petal.classList.add('petal');
+            const size = Math.random() * 12 + 10;
+            petal.style.width = `${size}px`;
+            petal.style.height = `${size * 1.3}px`;
+            petal.style.left = `${Math.random() * 100}%`;
+            petal.style.animationDuration = `${Math.random() * 5 + 6}s`;
+            petal.style.animationDelay = `${Math.random() * 5}s`;
+            petalContainer.appendChild(petal);
+        }
+
+        // Live Countdown to 24 Nov 2026
+        const weddingDate = new Date('2026-11-24T18:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = weddingDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById('days').innerText = String(days).padStart(2, '0');
+                document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+                document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+            }
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
